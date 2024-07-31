@@ -1,0 +1,17 @@
+﻿@model ToDo.Models.TodoModel
+
+<h1>Delete Todo</h1>
+
+<form asp-action="DeleteConfirmed">
+    <div>
+        <label>Description:</label>
+        <span>@Model.Description</span>
+    </div>
+    <div>
+        <label>Is Done:</label>
+        <span>@Model.IsDone</span>
+    </div>
+    <button type="submit">Delete</button>
+</form>
+
+<a href="@Url.Action("Index")">Back to List</a>

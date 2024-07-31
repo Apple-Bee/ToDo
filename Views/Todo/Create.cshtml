@@ -1,0 +1,17 @@
+﻿@model ToDo.Models.TodoModel
+
+<h1>Create Todo</h1>
+
+<form asp-action="Create" method="post">
+    <div>
+        <label asp-for="Description"></label>
+        <input asp-for="Description" class="form-control" />
+    </div>
+    <div>
+        <label asp-for="IsDone"></label>
+        <input asp-for="IsDone" type="checkbox" class="form-check-input" />
+    </div>
+    <button type="submit" class="btn btn-primary">Create</button>
+</form>
+
+<a href="@Url.Action("Index")">Back to List</a>
